@@ -22,11 +22,11 @@ function App() {
         })  
     }
 
-    function checkedBox(id, completed) {
+    function checkedBox(id, checked) {
         setList(currentList => {
             return currentList.map(item => {
                 if (item.id === id) {
-                    return { ...item, completed}
+                    return { ...item, completed: checked}
                 }
                 return item
             })
@@ -42,7 +42,7 @@ function App() {
   return (
     <>
         <GroceryForm addItem={addItem}/>
-        <h1 className='header'>Grocery List</h1>
+        <h1 className='grocery-list-header'>Your Grocery List</h1>
         <GroceryList newList={newList} checkedBox={checkedBox} removeItem={removeItem}/>
     </>
   )

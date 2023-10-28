@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(assets/grocery.jpg);
+    background-position: 52% 50%;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(5px);
+}
+
+.grocery-item {
+    display: grid;
+    justify-content: center;
+}
+
+.grocery-item-header {
+    color: rgba(0, 0, 0);
+    text-shadow: 0px 0px 10px rgba(255, 255, 255);
+    width: 500px;
+    display: grid;
+    justify-content: center;
+}
+
+.form-element {
+    background: radial-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.form-element * {
+    margin: 5px;
+}
+
+.add-button {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.grocery-list-header {
+    display: grid;
+    justify-content: center;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255);
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.list-background {
+    margin-left: -40px;
+    width: 500px;
+    background: radial-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4));
+    margin-bottom: 20px;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+    margin: 10px;
+}
+
+li label, li input {
+    position: relative;
+    cursor: pointer;
+}
+
+li input:checked + label {
+    text-decoration: line-through;
+    font-weight: bold;
+    color: red;
+}
+
+.remove-button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
